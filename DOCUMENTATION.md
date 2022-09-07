@@ -24,7 +24,7 @@ The tenableio package contains the following:
 
 **Client configuration and creation**  
 The client may be configured with a variety of settings. All of these settings have default values so none of them need
-to be specified in your code. For instance, if you are not behind a web proxy then do not specify `Proxy`.
+to be specified in your code.
 
 All settings specified in client configuration.
 ```go
@@ -114,8 +114,7 @@ The tenablesc package contains the following:
 
 **Client configuration and creation**  
 The client may be configured with a variety of settings. All of these settings, except for `BaseURL`, have default
-values, so you do not need to specify them in your code. For instance, if you are not behind a web proxy then do not
-specify `Proxy`.
+values, so you do not need to specify them in your code.
 
 All settings specified in client configuration.
 ```go
@@ -205,8 +204,10 @@ resp := tsc.Post(`/scan`, gotenableutils.StructToJSON(createScanReq))
 The downloads package contains the following:
 
 **Client configuration and creation**  
-The client may be configured with a variety of settings. All of these settings have default values so none of them need
-to be specified in your code. For instance, if you are not behind a web proxy then do not specify `Proxy`.
+The client may be configured with a variety of settings. All of these settings, except for `BearerToken`, have default
+values, so you do not need to specify them in your code.
+
+All settings specified in client configuration.
 ```go
 config := downloads.Config{}
 config.BaseURL = `https://www.tenable.com/downloads/api/v2`
@@ -216,8 +217,14 @@ config.Cert = `~/Desktop/cacert.pem`
 config.Vendor = `Foo company`
 config.Product = `Foo app`
 config.Version = `1.0.0`
-config.AccessKey = `ACCESS_KEY`
-config.SecretKey = `SECRET_KEY`
+config.BearerToken = `BEARER_TOKEN`
+
+dl := downloads.New(config)
+```
+Only required settings specified in client configuration.
+```go
+config := downloads.Config{}
+config.BearerToken = `BEARER_TOKEN`
 
 dl := downloads.New(config)
 ```
