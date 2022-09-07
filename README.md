@@ -1,5 +1,6 @@
 # GoTenable
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/andrewspearson/gotenable)](https://pkg.go.dev/github.com/andrewspearson/gotenable)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/andrewspearson/gotenable)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
 [![GoReportCard](https://goreportcard.com/badge/github.com/andrewspearson/gotenable)](https://goreportcard.com/report/github.com/andrewspearson/gotenable)
 
